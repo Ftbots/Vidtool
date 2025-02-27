@@ -101,3 +101,5 @@ if UPSTREAM_REPO is not None:
         log_error(
             "Something went wrong while updating, check UPSTREAM_REPO if valid or not!"
         )
+
+print("update.py completed successfully") # ADDED
