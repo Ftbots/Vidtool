@@ -1,10 +1,11 @@
-FROM python:3.9
+FROM mysterysd/wzmlx:latest
 
-WORKDIR /app
+WORKDIR /usr/src/app
+RUN chmod 777 /usr/src/app
 
-        COPY requirements.txt config.env .
-        RUN pip3 install --no-cache-dir -r requirements.txt
+COPY requirements.txt config.env .
+RUN pip3 install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD ["python3", "-m", "bot"]
+CMD ["bash", "start.sh"]
